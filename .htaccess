@@ -1,0 +1,16 @@
+RewriteEngine On
+
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+RewriteCond %{REQUEST_URI} !^/restfulController/images/
+
+RewriteRule (.*)$ index.php [QSA]
+
+#<Files *.html>1
+#ForceType application/x-httpd-php5
+#</Files>
+#
+#AddHandler application/x-httpd-php .htm .html
+#AddType application/x-httpd-php .htm .html
