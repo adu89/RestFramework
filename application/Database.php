@@ -8,14 +8,14 @@
      */
     class Database
     {
-        private $username;
-        private $password;
+        private $Username;
+        private $Password;
 
         function __construct()
         {
             include '../settings/DatabaseSettings.php';
-            $this->username = $DatabaseSettings["username"];
-            $this->password = $DatabaseSettings["password"];
+            $this->Username = $DatabaseSettings["username"];
+            $this->Password = $DatabaseSettings["password"];
 
         }
 
@@ -33,7 +33,7 @@
 
         private function connect() {
             try {
-                $this->connection = new PDO('mysql:host=localhost;dbname=myDatabase', $username, $password);
+                $this->connection = new PDO('mysql:host=localhost;dbname=myDatabase', $this->Username, $this->Password);
                 $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 return true;
             } catch (PDOException $e) {
