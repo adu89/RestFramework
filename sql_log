@@ -1,0 +1,7 @@
+CREATE TABLE `Menu` (
+  `MenuID` int(13) NOT NULL AUTO_INCREMENT,
+  `ParentID` int(13) NOT NULL,
+  `ContentID` int(13) NOT NULL,
+  PRIMARY KEY (`MenuID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
